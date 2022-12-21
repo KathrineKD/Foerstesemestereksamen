@@ -1,0 +1,737 @@
+/*Farver
+mørk blå: #25699F
+Underside blå + opdeling: #6AA0CB
+Rød fremhæv: #FF0000
+Rød neddæmpet: #F55C5C
+Dæmpet grå: #E6E6E6
+
+
+Tekst Sort: #000000
+Tekst grå: #707070
+ */
+
+
+                            /* Gennerelt
+ ----------------------------------------------------------------------------------- */
+
+.bye { /*diven som omslutter min footer*/
+    background-color: #25699F ;
+    text-align: center; /*centrer teksten*/
+}
+
+.hvid {
+  color: #FFFFFF;
+}
+
+/* Gå tilbage pilen i navigationsbaren */
+.ændre_knap {
+  background-color: #25699F;
+  border: none; /*gør at vi ikke har en grå knap kant rund om vores pil*/
+}
+
+
+
+
+.streg {
+  /* reference:  https://www.w3schools.com/howto/howto_css_style_hr.asp */
+  border: 1px solid #6AA0CB; /*laver stregen tykker og solid (tydeliger at se) + giver den farve*/
+}
+
+
+          /* Navbar */
+.navbar { 
+  background-color: #25699F; /*slet bg-dark i den første linje af navbarens kode og så kan vi skifte baggrundsfarven*/
+ /* Hjælp til at fastholde navbar når scrolle https://www.w3schools.com/howto/howto_css_fixed_menu.asp */
+  position: fixed; /*sætter navbar til en fixed position*/
+  top: 0; /* fortæller hvor den skal fixes dvs 0=top af siden*/
+  width: 100%; /*nav baren skal fylde hele siden*/
+  z-index: 1; 
+  /* Problem: mine opdelings strenge kunne ses i navbaren når den var åben - Løsning: https://www.w3schools.com/cssref/pr_pos_z-index.php 
+  Forklaring: z-index forklare ordren ting ligger i fx hvis -1 så ligger den under og 1 ligger den over andre elementer.
+  Dette er kun muligt når et element bruger position: ...*/
+}
+
+.nav-item {
+  color: #000000;
+}
+
+
+
+
+
+
+
+            /* Info box i bunden af siden 
+---------------------------------------------------------*/
+.info_box { /*gennerelt for hele info boksen i bunden*/
+  background-color: #E6E6E6;
+  font-size: 17px;
+  color: #000000;
+  padding-left: 30px; /*skubber teksten længer ind på siden (prøvede med margin og den skubbe også baggrundsfarven*/
+  width: 100%;
+}
+
+            /* Patienthåndbog knap */
+/* Lavet næsten ligsom #box (boksen i nye patienter afsnit) */
+.box {
+  background-color: #F55C5C;
+  color: #FFFFFF;
+  border-radius: 99px; /*gør hjørnerne runde på border*/
+ 
+  padding-left: 25px;
+  padding-right: 25px;
+  /* de to overstående er afprøvet og resultatet var at den kortede bagrundsfarven af på højre og venstre side af teksten - hvis px var for stor vil teksten gå den på næste linje */
+  /* Jeg afprøvede at ændre på margin top men den ændrede kun mellemrummet mellem kassen og overskriften */
+  padding-top: 5px; /*afprøve - giver mere baggrundsfarve i toppen*/
+  padding-bottom: 5px;
+
+  text-decoration: none; /*fjernede understregen i knappe */
+}
+
+
+/* R Lægehus (logo) */
+.r_lægehus {
+  color: #000000;
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: 30px;
+
+  margin-left: -15px; /*rykker R mere mød højre (prøvede med - og den rykkede den længer mod venstre (pga. hele teksten blev skud lidt mod højre))*/
+}
+  
+
+.r_lægehus: :hover {
+  color: #25699F;
+}
+
+
+/* Til nummerne i bunden af siden */
+.bund_nr {
+  text-decoration: none;
+  color: #000000;
+  font-weight: 500; 
+}
+
+/* Styling til adresse linket */
+.glem_dekorationer {
+  text-decoration: none;
+  color:  #000000;
+  font-weight: 500;
+}
+
+
+/* SKAB RUM I SLUTNINGEN AF SIDEN */
+/* er kun til at fjerne hvide del under den blå box*/
+.fjern-margin { 
+  margin-bottom: 0;
+}
+
+/* skaber et lille mellemrum mellem den grå kasse og den blå kasse */
+.lidt_plads_bund {
+  margin-bottom: 0px; /*Lavet for der ikke skal være et hvidt mellemrum mellem går og blå box*/
+  padding-bottom: 10px; /*gør at vi får lidt plads mellem content og den blå box med baggrundsfarve*/
+}
+
+/* skaber et lille mellemrum mellem den røde knap og teksten */
+.lidt_plads_top {
+margin-top: 20px;
+}
+
+
+
+
+
+                                      /* Forside
+------------------------------------------------------------------------------------------ */
+
+/* Book tid og forny recept button 
+---------------------*/
+/* hjælp: https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_button3 */
+.button1 {
+    width: 300px; /*breden på knappen*/
+    color: black; /*darven på teksten i knappen*/
+    padding: 16px 32px; /*giver mere rum omkring teksen inden i kanppen - TJEK OP PÅ*/
+    text-align: left; /*teksen er justeret i venstre side*/
+    text-decoration: none; /**/
+    display: inline-block; /**/
+    font-size: 23px;
+    margin: 4px 2px; /**/ 
+    border-color: #FF0000; 
+    transition-duration: 0.4s; /*gør at når man hover musen over at farve skiftet ikke er så hårdt, men mere blød*/
+    
+    width: 75%; /*gør at vores button fylder 75% af skærmens bredde*/
+}
+ 
+/* hjælp: https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_button3 */
+/* https://www.youtube.com/watch?v=3aK-eAU5J5A - første 1min */
+/* https://getbootstrap.com/docs/5.2/components/buttons/#outline-buttons  */
+.btn-outline-danger {
+    border-radius: 75px; /*gør hjørnerne runde på border*/
+    width: 320px; /*breden på knappen*/
+    color: black; /*Farven på teksten i knappen*/
+    padding: 16px 32px; /*giver mere rum omkring teksen inden i kanppen - TJEK OP PÅ*/
+    text-align: left; /*teksen er justeret i venstre side*/
+    text-decoration: none; /**/
+    display: inline-block; /**/
+    font-size: 23px;
+    margin: 40px;  /*luften uden om border (luft til fx op navbaren.) - hjælp til visualisering: https://www.google.dk/search?q=margin+and+padding&sxsrf=ALiCzsbUYnHVBDNxUM0U7R_XDqoGCx5NUA:1670850769802&source=lnms&tbm=isch&sa=X&ved=2ahUKEwie6OyUlPT7AhXrgP0HHZu2Al8Q_AUoAXoECAEQAw&biw=2512&bih=1329&dpr=1#imgrc=8n6rqzXAAZpsjM */
+    border-color: #FF0000; /* giver border dens farve*/
+    transition-duration: 0.4s; /*gør at når man hover musen over at farve skiftet ikke er så hårdt, men mere blød*/
+    border: 5px solid #FF0000; /*gør borderen rød og tykker - reference: https://www.digitalocean.com/community/tutorials/how-to-style-html-elements-with-borders-shadows-and-outlines-in-css*/
+     
+
+  }
+
+
+  .btn-outline-danger:hover {
+    background-color: #ff0000;
+    color: rgb(0, 0, 0);
+  }
+ 
+
+/* ikon i book tid knap */
+  .calender {
+    /* prøvet frem med breden og højdten for at se hvilken der passede bedst */
+    width: 30%;
+    height: 80px;
+    margin-top: -5px;/*prøvede med padding og border, men de forvringede ikonet - med margin rykkede den op når det er -*/
+    margin-left: 20px; /*rykker ikonet længer mod højre*/
+  }
+
+
+  .flyt_lidt {
+    padding-right: 20px; /*rykker teksten som vi har stylet til float:right; i html til at rykke længer mod venstre*/
+    color: #000000; /*farver teksten i vores book tid knap*/
+  }
+
+
+  /* Få hjælp link - fører til hjælp til booking side
+  ------------------------------------------------------------------------------------------------ */
+  #hjælp {
+   
+    margin-top: -55px; /*Rykker teksten længer op på siden (gør den da det er -)*/
+    margin-left: 75%; /*skubber teksten længer til venstre*/
+  }
+
+
+  /* POP NED BOKS (ACCODION) 
+  ----------------------------------------------------------------------------------------------------*/
+  
+/* POP ned boks m. video - når den er lukket */
+ h5 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #FFFFFF;
+ }
+
+ 
+.accordion {
+  /* background-color: #FF0000; var bare til at kunne se mens jeg fulgte vidioen 
+  (tjek videoen under "hjælp til booking - accordion sektion) og kunne se ændringer */
+  width: 90%; /*er breden som accordion kommer til at fylde på siden*/
+  margin: 0 auto; /*??*/
+}
+
+.accordion_item {
+  margin-bottom: 15px; /*Giver luft under indholdet*/
+} 
+
+.accordion_title {
+  position: relative; /* ... hvis den ikke er relativ så vil accordion ikke virke*/
+  padding: 20px 15px 15px 15px; /*giver padding rund om selve content (skubber den i midten og giver mere udtryk for at det er en knap/kollone)*/
+  background-color: #25699F; /*giver farven på det der bliver knappen*/
+  cursor: pointer; /*gør at når vi er på desktop så vil vores mus laves om til en hånd så man kan se man kan trykke på den*/
+ 
+}
+
+
+/* Dette er style til pil ikonet i accordion knappen */
+.accordion_title .arrow {
+  position: absolute; /*sørger for at den beholder sin plad lige meget hvilke størrelse den har*/
+  right: 30px; /*gør at den er 30px fra den højre side (og da vi har accordion_title før arrow i denne style går du ud fra accordion_title afgrænsning) */
+  top: 30%; /*hvor langt fra toppen pilen er*/
+  
+}
+
+
+.accordion_desc {
+  padding: 30px; /*padder indholdet i accordionet*/
+  background-color: #6AA0CB; /*farver baggrunden i indholds delen af accordionen*/
+}
+
+/* Styrer breden og højden på videoen i accordionen */
+video {
+  height: 100%;
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+/* Telefon sektionen -------------------------*/
+/* kollonerne (forklar) */
+.column5 {
+  float: left;
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row5:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Ikoner  (nedenstående ikoner kunne også godt havde været id (#)*/
+.akut_ikon {
+  width: 75%; /*afprøvet + tjek med mockup design for at finde størrelse*/
+  margin-left: 25%; /*skubber ikonet læænger mod højre*/
+  margin-top: -20px; /*ændre ikonet placering fra toppen (da tallet er - skubber den den op)*/
+  
+}
+
+
+.mobil_ikon {
+  width: 50%; /*afprøvet + tjek med mockup design for at finde størrelse*/
+  margin-left: 32%; /*skubber ikonet længer mod højre*/
+  margin-top: 12px; /*ændre ikonet placering fra toppen (da tallet er + skubber den den ned)*/
+}
+
+
+.assistant_ikon {
+  width: 60%; /*afprøvet + tjek med mockup design for at finde størrelse*/
+  margin-left: 30%; /*skubber ikonet længer mod højre*/
+  margin-top: -15px; /*ændre ikonet placering fra toppen (da tallet er - skubber den den op)*/
+}
+
+
+
+
+/* ændre tekst størrelsen i nummer sektionen */
+.row5 {
+  font-size: 19px;
+  padding-right: 15%; /*skubber teksten længer mod venstre*/
+}
+
+
+.tætter_på {
+  margin-bottom: 0px; /*fjerner mellemrum mellem p tag og a tag i nummre sektionen (fx mellem akut nr. og nummeret)*/
+}
+
+
+
+.dark { /*ændre farven på nummeret i a tagget*/
+  color: #000000;
+}
+
+
+
+
+                  /* AKUT side
+------------------------------------------------------------------- */
+
+/* H1 på akut siden */
+#akuth1 {
+  margin-top: 15px; /*giver plads i mellem contents border og nav baren*/
+  margin-bottom: 20px;
+  font-size: 23px;
+  color: #707070;
+}
+
+/* tekst i p - normal tekst */
+.akutp {
+  font-size: 25px;
+  color: #707070;
+
+}
+
+#plads { /*specefik for at få mere plads fra ring tekst og nav bar*/
+  margin-top: 15px;
+}
+
+/* H2 - til telefon nr */
+.akuth2 {
+  color: #FF0000;
+  font-size: 50px;
+}
+
+
+
+.akut_telefon { /*kun til TLF. på akut telefon - style det som nr. uden understregen*/
+  color: #FF0000;
+  font-size: 50px; 
+}
+
+
+.tekst_str_15 { /*lavet pga. tekst skulle være mindre*/
+  font-size: 16px;
+  color: #000000;
+  margin-bottom: 10px; /*gør at der er mindre luft mellem tekstafsnitene (fra bunden)*/
+}
+
+#str_17 { /*lavet pga. et tekst styk skulle være større*/
+  font-size: 17px;
+  margin-bottom: 0;
+}
+
+
+
+
+                /* Praksis info side
+------------------------------------------------------------ */
+/* page oversigt navigation */
+.container_2 {
+  /* De tre øverst gør at vores under-navbar er fasthold - se på linket (fik hjælp og inspiration) på https://www.w3schools.com/howto/howto_css_fixed_menu.asp */
+  position: fixed; /*ved at sige positione skal være fixed gør vi at den er fast sat på vores skærm og følger med når vi scroller*/
+  top: 55px; /*prøvet mig frem til jeg fik den rigtige nr.*/
+  width: 100%;
+  background-color: #6AA0CB;
+  font-size: 14px;
+}
+
+/* Kolloner til page oversigt nav */
+.column {
+  width: 33.33%; /*sørger for at de fylder 1/3 - ellers ville de stå i en række*/
+  padding-top: 5px;
+  padding-bottom: 5px; 
+  /* overstående padding giver mere luft mellem indholdet og siderne rundt om*/
+}
+
+#ryk { /*flytter a tagget med lægevagtens nr. længer mod venstre så den ikke står helt ude i kanten*/
+margin-left: -17px; 
+}
+
+/* selve linkene - a i kolonnerne */
+.link {
+  color: #000000;
+  text-decoration: none; 
+  
+}
+
+
+
+
+/* overskrift */
+#Praksis_info_h1 {
+  color: #FFFFFF;
+  font-size: 49px;
+  font-weight: 400; /*font vægt - kan ændre på udsendet af teksten - om den er fed, kurciv, let osv. Er ændre da den virkede for tung.*/
+  /*få teksten over img - ref/ide til fikse problemet: https://www.youtube.com/watch?v=Si4ViAvvnwU og https://stackoverflow.com/questions/1829541/how-to-put-text-over-an-image-without-absolute-positioning-or-setting-the-image*/
+  margin-top: -130px; /*prøved det af og det virker*/
+  margin-left: 120px;/*prøved det af og det virker*/
+  
+  
+  padding: 20px; /*giver plad rundt om selve indholdet - gør at vores tekst ligger helt op af højre kant*/
+  right: 1%; /*Prøvet at følge tankegangen bag top delen fra video og prøvede det så af og det virkede.*/
+}
+
+/* Baggrundsbillede øverst på info siden */
+#baggrundsbille_info{
+  margin-top: 130px; /* gør at vores billede ikke ligger under vores fixed page nav */
+  width: 100%; /*Ved at sætte breden til 100% vil den fylde hele skærmen og så når den skifter i størrelse*/
+}
+
+
+/* Tabel --------------------------------------------------------------*/
+/* inspiration og hjælp  https://www.w3schools.com/html/tryit.asp?filename=tryhtml_table_intro*/
+table { /*fandt ud at man kan bare skrive tagget uden # eller . når det er et tag*/
+  margin-left: 6.5%; /*centrer tablen midt på siden på mobil version*/
+
+} 
+
+
+td, th {
+  padding-right: 40px; /*giver mere luft mellem cellerne på højre side*/
+}
+
+tr:nth-child(odd) {
+  /* tager kun de lige tal så hver anden række (pga det er tr vi har sat den til) */
+  background-color: #E6E6E6;
+}
+
+
+
+/* små overskrifter + tekst på praksis info siden */
+.små_overskrifter_str23 {
+color: #707070;
+font-size: 23px;
+margin-top: 15px; /*giver mere plads i toppen */
+margin-bottom: 0; /*gør at nr. nedenunder ligger tætter på*/
+}
+
+/* tekst i str. 23 brugt i afnit akut og lægevagt - ved åbningstider */
+.tekst_str23 {
+  color: #707070;
+  font-size: 23px;
+}
+
+/* tekst i str. 15 brugt i afnit akut og lægevagt - ved information */
+.tekst_str15 {
+color: #000000;
+font-size: 15px;
+}
+
+#tekst_str20 {
+  font-size: 20px;
+  color: #000000;
+}
+
+#tekst_str17 { /*Ring hvis ved lægevagten*/
+  font-size: 17px;
+  color: #000000;
+  margin-bottom: 0;
+}
+
+
+
+
+
+/* telefon nr på siden */
+.tal {
+  color: #707070;
+  font-size: 25px;
+  text-decoration: none; /*gør at vi ikke har streg under mobil nr.*/
+}
+
+/* style kun til nr. foran telefon nr. */
+.nr {
+  color: #707070;
+  font-size: 25px;
+  margin-bottom: 0; /*gør at teksten. nedenunder ligger tætter på*/
+}
+
+
+
+                /* Find vej afsnit */
+
+.navigation_ikon {
+  width: 80%; /* styrer ikonets størrelse igennem dens brede*/
+  margin-left: 5px; /*rykker ikonet længer mod højre*/
+  margin-top: -10px; /* rykker ikonet længer op fra dens placering */
+}
+
+.vej { /*er for adresse teksten sektionen (ordet adresse + adressen)*/
+  font-size: 23px;
+  color: #707070;
+}
+
+#bold { /*Lavet for at gøre adressen lidt mere bold*/
+  font-weight: 500;
+}
+
+.flyt_ned {
+ padding-top: 7%; /*rykker overskift ned på siden.*/
+ margin-bottom: 0; /*fjerner margin i bunden - mindsker luften mellem titel og adresse*/
+}
+
+.flyt_til_venstre {
+  margin-left: -50px; /* Flytter overskrift og adresse mod venstre (overskrider dermed dens opretenlige kollone)*/
+}
+
+
+
+        /* kolloner - forklar */
+.column3 {
+  float: left;
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row3:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+/* info tekst for find vej sektion - tekst delen */
+.vej_info {
+  font-size: 14;
+  color: #707070;
+  margin-left: 5%; /*afprøvet - der er 5% luft på venstre side*/
+}
+
+
+
+
+
+
+
+
+                /* Nye patienter sektionen */
+/* de to nedstående style hjæplper til at ligne en kasse med dens baggrundsfarve */
+#farve {
+  color: #FFFFFF; /*giver farve til teksten*/
+  margin-top: 30px; /*giver mere luft i toppen af kassen*/
+  margin-bottom: 25px; /*giver mere luft i bunden af kassen*/
+}
+
+#baggrund {
+  background-color: #F55C5C;
+  padding: 5px; /*gør at farven går helt ud til kanterne*/
+  
+}
+
+/* denne class er til at fjerne margin omkring de to streger om nye patienter sektionen (så baggrundfarven kan fylde ud) */
+.fjern_2 {
+margin: 0;
+}
+
+
+
+              /* Læger og personale sektion */
+/* SKAL HAVDE FORKLARET DE TO NEDENSTÅENDE STYLES */
+.column1 {
+  float: left;
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row1:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+
+
+
+
+/* billeder af lægerne */
+.læger {
+  width: 72%; /*afgør breden af billedet*/
+  padding-left: 30px; /* tilføjet for at give mere luft mellem billedet og teksten på venstre side*/
+  padding-bottom: 5%; /*skaber luft mellem melledernes bund*/
+}
+
+/* styling på navne af læge sektion */
+.closer {
+margin-bottom: 2px; /*til for at bringe navn og profision tætter på hinanden*/
+padding-top: 40px; /*ved at tilføje padding er teksten rykkede længer ned på siden og er centrert.*/
+padding-left: 16px; /*rykker lægens navn til højre*/
+}
+
+
+/* kun styling af lægernes profision  */
+.til_højre {
+  padding-left: 16px; /*rykker lægens profision til højre*/
+}
+
+
+/* Der er kun brugt h4 på info siden og på lægerene og personale overskrifter */
+h4 { 
+  padding-bottom: 15px; /*gør at der bliver mere luft mellem bunden af teksten og billederne*/
+}
+
+/* specifik til personale overskriften for at give mere luft fra øverst på teksten og ovenstående billede */
+#plads_top {
+   padding-top: 25px;
+}
+
+
+/* de 2 nedenstående er en kopi af styling closer og til_højre bare padding-left er størrer */
+/* styling på navne af læge sektion */
+.closer1 {
+  margin-bottom: 2px; /*til for at bringe navn og profision tætter på hinanden*/
+  padding-top: 40px; /*ved at tilføje padding er teksten rykkede længer ned på siden og er centrert.*/
+  padding-left: 50px; /*rykker lægens navn til højre*/
+  }
+  
+  
+  /* kun styling af lægernes profision  */
+  .til_højre1 {
+    padding-left: 50px; /*rykker lægens profision til højre*/
+  }
+
+
+
+
+
+
+                  /* GDPR */
+/* Selve teksten i GDPR sektionen */
+#gdpr {
+  color: #707070;
+  font-size: 18px;
+}
+
+
+
+
+
+
+
+              /* Hjælp til booking - side */
+#sådan_gør_du {
+  color: #707070;
+}
+
+
+/* Kolloner - FORKLAR */
+.column8 {
+  float: left;
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row8:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Styler teksten der hører til billederne */
+.venste_align {
+  text-align: left; /*får dem til at starte i venstre side*/
+  padding-left: 20px /*rykker dem ind under billederne (i mobil version)*/
+}
+
+/* Vi rammer p-tag under classen colum og kan dermed style dem alle på en gang */
+.column8, p {
+  color: #707070;
+  font-size: 15px;
+}
+
+/* style til tekst punkterne 9-13 */
+.flere_punkter {
+  color: #707070;
+  font-size: 15px;
+  margin-left: 5%;
+}
+
+
+
+
+
+/* Billede til trin 9-13 */
+.billede3 {
+  width: 90%; /*gør bare at den ikke fylder hele skærmen pga estetik*/
+}
+
+/* går efter ptags under klassen flere_punkter */
+.flere_punkter, p{
+  margin-bottom: 10px; /*laver mindre mellemrum mellem p-tags*/
+}
+
+
+
+/* kun for slut tekst på hjælpe siden */
+#ret_str {
+color: #707070;
+font-size: 17px;
+}
+
+/* farv og ændre str på teksten mellem trin 8 og 9 */
+#grey {
+  font-size: 15px;
+  color: #707070;
+}

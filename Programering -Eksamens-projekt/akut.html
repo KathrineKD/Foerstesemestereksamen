@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="da">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="Akut siden på R læghus, kan hjælpe dig igennem nødsituation. På siden finder du lægehusets akut nr. lægevagtens nr. 
+        og en forklaring på hvornår man burde ringe til hvad og hvis man burde ringe til 1-1-2" />
+        <meta name="keywords" content="R Lægehus, akut nr., sygdom, nødsituation">
+        <meta name="name" content="Kathrine K. Dam" />
+        <meta name="robots" content="noindex">
+        <title>Akut</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <link rel="stylesheet" href="css/new_style.css">
+    </head>
+
+
+
+
+<body>
+
+
+        <!-- Responsive navbar
+        ----------------------------------------------------->
+       
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+
+                    <button class="ændre_knap" onclick="history.back()"> <!--havde problemer med at skulle style den - vidste sig jeg bare skulle sætte klasse ind i denne div -->
+                        <img class="go_back" src="img/Ikoner/Backward_arrow.svg" alt="pil fra mockup (XD - plugin (Icons 4 Design))"> <!---indsat billede af pil som man skal trykke på for at gå tilbage-->
+                    </button> <!--Gå tilbage knap (reference: https://www.w3schools.com/jsref/met_his_back.asp)
+                    Den loader den forige URL fra din historie. onclick=gør at når du klikker så ser skrevent handling
+                    Har dog fundet ud af det måske ikke er så sikker, ved dog ikke hvad man ellers kan gøre, da forbrugerne har efterspurgt featuren i researchen (https://www.sjoerdlangkemper.nl/2020/04/08/open-redirect-through-javascript-history-back/)-->
+            
+                    <div class="text-center"> <!--indsat for at centrer R Lægehus (vil dog kun i mobil)-->
+                    <a class="navbar-brand" href="index.html">R Lægehus</a> <!--"Logoet" - linker tilbage til forside-->
+                </div>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-center"> <!--- jeg har sat text-center på til slut i classen = den gør at mine nav-items står i midten når vi er i mobil/mindre versionen-->
+                        
+                        <!-- Nedenstående er vores punkter på vores navigationsbar -->
+                        <li class="nav-item"><a class="nav-link" aria-current="page" href="index.html">Forside</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="akut.html">Akut</a></li>
+                        <li class="nav-item"><a class="nav-link" href="hjælp_til_booking.html">Hjælp til booking</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Henvisninger</a></li>
+                        <li class="nav-item"><a class="nav-link" href="praksis_info.html">Praksis Info</a></li>
+                        
+                        <li class="nav-item"><a class="nav-link" href="#">Sundhedsider</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Behandlingsmuligheder</a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+
+        <br>
+        <br>
+
+        <!-- Page content
+        ------------------------------------------------------------->
+
+
+    <br>
+
+   <!-- Akut telefon -  SEKTION -->
+   <div class="text-center">
+        <p class="akutp"><b>Akut nr. <br> til egen lægehus</b></p>
+        <h2 class="akut_telefon"><!--denne har fået id - for at vi kan få tlf og nr. til at stå på samme linje og se ens ud i styling men uden understregen.-->
+            Tlf.
+            <a class="akuth2" href="tel:#">  00 00 00 00</a>
+         </h2>
+
+        <br>
+        <p class="akutp">
+            
+            
+            Ring på overstående nummer
+            <br>
+            ved akut sygdom. <br>
+            <br>
+            fra kl. 12.00 - 16.00
+        </p>
+   </div>
+
+
+
+   <hr class="streg"> <!--linjen der separat sektioner-->
+
+
+<!-- Lægevagten -  SEKTION -->
+    <div class="text-center">
+        <p class="akutp"><b>Lægevagtens nr.</b></p>
+        <h2 class="akut_telefon" > <!--denne har fået id - for at vi kan få tlf og nr. til at stå på samme linje og se ens ud i styling men uden understregen.-->
+            Tlf.
+            <a class="akuth2" href="tel:#">  22 22 22 22</a>
+        </h2>
+    
+        <p class="akutp">
+            Tilgængelig hverdage,<br> 
+            fra kl. 16.00 til 08.00
+        </p>
+        <br>
+        <p class="akutp">
+            Samt i weekend 
+            og helligdage: <br> hele døgnet.
+        </p>
+
+        <br>
+
+        <p id="str_17"> <!-- valgt at gør id ved denne pga. tekst skulle være mindre.-->
+            Ring hvis: <br>
+        </p>    
+            <p class="tekst_str_15">- Pludseligt opstået eller forværret sygdom. <br> </p>
+            <p class="tekst_str_15">- Din egen læge er lukket. <br> </p>
+            <p class="tekst_str_15">- Hvis du ikke ved om du har brug for en læge. <br> </p>
+            <p class="tekst_str_15">- Hvis du ikke tror du kan vente til din læge åbner igen. <br></p>
+            <p class="tekst_str_15">- <b>Ring</b> før du kommer ind på den <br><b > nærmeste akutmodtagelse.</b></p>
+        
+
+    </div>
+
+    <hr class="streg"> <!--linjen der separat sektioner-->
+
+    <!-- 1-1-2 SEKTION -->
+    <div class="text-center">
+        <!-- <h1 id="akuth1">Akut</h1> -->
+        <p class="akutp" id="plads"> <!--Det har virkede med at jeg har både class og id på et tag - id pga. mere plads mellem ring og nav bar.-->
+            Ring</p>
+        <h2 >
+            <a class="akuth2" href="tel:#"> 1-1-2</a>
+        </h2> <!--reference: https://www.youtube.com/watch?v=EDoowuaEfWI ca. første 30sek-->
+        <!-- overstående har class i a-tagget, da den ikke gad reager i h2 tagget - pga prioritet -->
+        <p  class="akutp">
+            Hvis der er tale om: <br> </p>
+            <!-- Jeg ved godt jeg kunne lave nedenstående med ul - men det ville ikke se ud som jeg ville havde det. -->
+                <p class="akutp">- En person <b>pludslig falder om </b><br>
+                    bliver bevistløs eller meget dårlig. <br></p>
+                
+                <p class="akutp">- Hvis du <b>frygter for dit liv </b> eller <br>
+                    en <b> anden persons liv.</b> <br></p>
+                
+                <p class="akutp">- Akut brug for en <b>ambulance.</b></p>
+                <br>               
+    </div>
+
+       <!-- Footer
+    ----------------------------------------------------------------- -->
+        <div class="bye"> <!--omsluttede fotter i div og kaldt bye for at kunne farve baggrund + centrer tekst-->
+            <footer>
+             <p class="fjern-margin hvid">dette site har kun til undervisningsformål</p>
+             <!-- ved at lave mellemrum kan man benytte 2 klasser på et tag -->
+            </footer>
+        </div>
+
+
+
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

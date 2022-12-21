@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="da">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="Her kan man finde praksis infomationer om R lægehus, dette inkluder, deres nr., adressen, Læger og personale, om vi tager imod nye patienter." />
+        <meta name="keywords" content="R Lægehus, adresse, R Lægehus nummer, R Lægehus nr, R lægehus personale, R Lægehus læger, R lægehus gdpr, R lægehus nye patienter.">
+        <meta name="name" content="Kathrine K. Dam" />
+        <meta name="robots" content="noindex">
+        <title>Praksis info</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <link rel="stylesheet" href="css/new_style.css">
+    </head>
+
+
+    <body>
+
+    
+ 
+
+
+  <div class="under_navbar">
+    <div class="text-center"> <!--- centrer teksten-->
+      <div class="container_2"> <!-- bare et navn - indholder alle kolonnerne-->
+        <div class="row"> 
+          <!-- Forklaring på overstående klasse: skaber rækker - man kan dog se jeg har tre rækker og kun en klasse row 
+            - dette er fordi vi har sat breden på vores column til 33,33%-->
+
+          <div class="column"> <!-- dette er en enkelt kollone (man kan sige 1 firkant)-->
+            <a class="link" href="#klinikkens_tlf">Klinikkens telefon</a>
+                            <!-- href hvor man har # bruges til at linke længer ned på ens side - gøres ved at tildele stedet et id -->
+          </div>
+
+          <div class="column">
+            <a class="link" href="#akut">Akut telefon</a>
+          </div>
+
+          <div class="column">
+            <a id="ryk" class="link" href="#Lægevagts_tlf">Lægevagtens telefon</a> <!-- id til at rykke linket længer til venstre så den ikke er helt i kanten af skærmen.-->
+          </div>
+
+          <div class="column">
+            <a class="link" href="#vej">Find vej</a>
+          </div>
+
+          <div class="column">
+            <a class="link" href="#patient">Nye patienter?</a>
+          </div>
+
+          <div class="column">
+            <a class="link" href="#læger">Lægerne</a>
+          </div>
+
+          <div class="column1"> <!--Længer nede har vi en med to kolloner som har classen her (HVIS ÆNDRE PÅ SKAL TJEKKE MED NAV)-->
+            <a class="link" href="#personale">Personale</a>
+          </div>
+
+          <div class="column1"> <!--Længer nede har vi en med to kolloner som har classen her (HVIS ÆNDRE PÅ SKAL TJEKKE MED NAV)-->
+            <a class="link" href="#gdpr">GDPR</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+                  <!-- Responsive navbar-->
+       <!-- Denne ligger under min undernavbar (som kun er for denne side) da jeg havde et problem med at de begge havde 
+        position: fixed; (hvilket jeg ville have) men undersiden lage oven på navbaren når man folede den ud = dermed
+        løsning: sætte denne under da den så læses af computeren sidst og går ud fra det (computeren læser ned af)-->
+
+        <nav class="navbar navbar-expand-lg navbar-dark">
+          <div class="container">
+  
+            <button class="ændre_knap" onclick="history.back()"> <!--havde problemer med at skulle style den - vidste sig jeg bare skulle sætte klasse ind i denne div -->
+              <img class="go_back" src="img/Ikoner/Backward_arrow.svg" alt="pil fra mockup (XD)"> <!---indsat billede af pil som man skal trykke på for at gå tilbage-->
+            </button> <!--Gå tilbage knap (reference: https://www.w3schools.com/jsref/met_his_back.asp)
+            Den loader den forige URL fra din historie. onclick=gør at når du klikker så ser skrevent handling
+            Har dog fundet ud af det måske ikke er så sikker, ved dog ikke hvad man ellers kan gøre, da forbrugerne har efterspurgt featuren i researchen (https://www.sjoerdlangkemper.nl/2020/04/08/open-redirect-through-javascript-history-back/)-->
+              
+            <div class="text-center"> <!--indsat for at centrer R Lægehus (vil dog kun i mobil)-->
+                <a class="navbar-brand" href="index.html">R Lægehus</a> <!--"Logoet" - linker tilbage til forside-->
+            </div>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-center"> <!--- jeg har sat text-center på til slut i classen = den gør at mine nav-items står i midten når vi er i mobil/mindre versionen-->
+                      
+                      <!-- Nedenstående er vores punkter på vores navigationsbar -->
+                      <li class="nav-item"><a class="nav-link" aria-current="page" href="index.html">Forside</a></li>
+                      <li class="nav-item"><a class="nav-link" href="akut.html">Akut</a></li>
+                      <li class="nav-item"><a class="nav-link" href="hjælp_til_booking.html">Hjælp til booking</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#">Henvisninger</a></li>
+                      <li class="nav-item"><a class="nav-link active" href="praksis_info.html">Praksis Info</a></li>
+                      
+                      <li class="nav-item"><a class="nav-link" href="#">Sundhedsider</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#">Behandlingsmuligheder</a></li>
+                      
+                  </ul>
+              </div>
+          </div>
+      </nav>
+
+
+
+
+
+
+
+
+
+
+<!-- Page content-->
+<!-- Cover billede + overskrift -->
+      <div>
+       <div id="klinikkens_tlf"></div> <!-- id og denne div er her kun fordi siden skal hoppe og det sted passer ca. med at det ligner op med klinikkens nr sektionen -->
+        <img id="baggrundsbille_info" src="img/Baggrundsbillede.jpg" alt="Mintgrøn baggrund med medicin ting ovenpå (forfatter: Freepik. Link: https://www.freepik.com/free-photo/health-still-life-with-copy-space_12412888.htm#query=medical%20center&position=26&from_view=search&track=sph">
+        <h1 id="Praksis_info_h1">Praksis info</h1>
+         
+      </div>
+
+    
+
+      <br>
+<!-- Lægehusets overskrift + nr. -->
+    <div class="text-center"> <!--Classe gør at vi centrer teksten -->
+      <p class="små_overskrifter_str23">R Lægehus telefon</p> <!-- id er til at linke til undermenuen på siden-->
+      <p class="nr">nr. <a class="tal" href="tel:#"> 11 11 11 11</a></p> <!---clas gør at vi kan style (tjek under akut for href forklaring)-->
+    </div>
+
+    <br>
+
+<!-- tabel + overskrift -->
+    <div class="text-center">
+        <h2>Åbningstider</h2>
+        
+<!-- Åbningstider tabel -->
+      <table> <!-- definer at vi har med en tabel at gøre-->
+
+        <tr> <!--tr definer en række i tabellen-->
+          <th></th> <!-- mening den skal være blank-->
+          <th>Telefontid</th> <!-- th står for tabel head celle og er automatisk bold-->
+          <th>Konsultation</th>
+        </tr>
+
+        <tr>
+          <th>Mandag</th>
+          <td>8.00-13.00</td> <!-- td = celle-->
+          <td>8.00-15.00</td>
+        </tr>
+
+        <tr>
+          <th>Tirsdag</th>
+          <td>8.00-13.00</td>
+          <td>8.00-15.00</td>
+        </tr>
+
+        <tr id="akut"> <!-- id er her kun fordi siden skal hoppe og det sted passer med at det ligner op med akut sektionen -->
+          <th>Onsdag</th>
+          <td>8.00-13.00</td>
+          <td>8.00-15.00</td>
+        </tr>
+
+        <tr>
+          <th>Torsdag</th>
+          <td>8.00-13.00</td>
+          <td>8.00-17.00</td>
+        </tr>
+
+        <tr>
+          <th>Fredag</th>
+          <td>8.00-17.00</td>
+          <td>8.00-15.00</td>
+        </tr>
+
+      </table>
+    </div>
+
+
+    <br>
+    <hr class="streg"> <!--linjen der separat sektioner-->
+         
+
+<!-- Akut nr. sektion -->
+  <div class="text-center"> <!--Classe gør at vi centrer teksten -->
+    <p class="små_overskrifter_str23">Akut telefon</p> 
+    <p id="Lægevagts_tlf" class="nr">nr. <a class="tal" href="tel:#"> 00 00 00 00</a></p> <!---class gør at vi kan style (tjek under akut for href forklaring)-->
+    <!-- overstående id er her kun fordi siden skal hoppe og det sted passer ca. med at det ligner op med lægevagtens nr sektionen -->
+    <p  class="tekst_str23">fra kl. 12.00 - 16.00</p>
+    <p class="tekst_str15">Ring på overstående nr. <br>
+    ved akut sygdom.</p>
+  </div>
+          
+
+
+    <hr class="streg"> <!--linjen der separat sektioner-->
+
+<!-- Lægevagtens nr. sektion -->
+  <div class="text-center"> <!--Classe gør at vi centrer teksten -->
+    <p class="små_overskrifter_str23">Lægevagtens telefon</p> 
+    <p class="nr">nr. <a class="tal" href="tel:#"> 22 22 22 22</a></p> <!---clas gør at vi kan style (tjek under akut for href forklaring)-->
+    <p class="tekst_str23">fra kl. 16.00 - 08.00</p>
+    <p id="tekst_str20">Tilgængelig hverdage, samt i weekend <br> <!--- valgt id da det er det eneste sted på siden med den størrelse-->
+        og på hellidage: hele døgnet.</p>
+    <p class="tekst_str15">Ring på overstående nr. <br>
+    ved akut sygdom.</p>
+    <br> <!-- indsat for at skabe mere luft mellem tekst afsnit-->
+    
+    <p id="tekst_str17">Ring hvis:</p>
+    <p class="tekst_str_15">- Pludseligt opstået eller forværret sygdom. <br> </p>
+    <p class="tekst_str_15">- Din egen læge er lukket. <br> </p>
+    <div id="vej"></div> <!-- id og div er her kun fordi siden skal hoppe og det sted passer med at det ligner op med vej sektionen -->
+    <p class="tekst_str_15">- Hvis du ikke ved om du har brug for en læge. <br> </p>
+    <p class="tekst_str_15">- Hvis du ikke tror du kan vente til din læge åbner igen. <br></p>
+    <p class="tekst_str_15">- <b>Ring</b> før du kommer ind på den <br> 
+    <b > nærmeste akutmodtagelse.</b></p>
+  </div>
+
+  
+  
+    <hr class="streg"> <!--linjen der separat sektioner-->
+
+<!-- Find vej sektion -->
+
+<div class="row3">
+  <div class="column3">
+    <img class="navigation_ikon" src="img/Ikoner/navigations-ikon.png" alt="Navigationsikon i sort/hvid. Forfatter: Free icon. Link: https://www.iconfinder.com/icons/3586361/location_map_navigation_pointer_icon">
+  </div>
+
+  <div class="column3">
+    <div class="flyt_til_venstre">
+      <h3 class="flyt_ned"><b> Find vej</b></h3> 
+      <p class="vej">Adresse: <a class="vej" id="bold" href="http://maps.google.com/?q=GlLandevej2,Herning,7400">Gl Landevej 2, <br> 7400 Herning</a></p>
+     <!-- Overstående er fundet ud af ved hjælp af: https://stackoverflow.com/questions/27419509/open-google-map-with-specific-address-in-a-browser -->
+      <!-- forklaring man indsætter http://maps.google.com/?q= i href og alt efter q= er den specefikke adresse -->
+      <!-- href adressen ser lidt sjov ud til sidst - virker men ansåes som en fejl i validator hvis der var mellemrum -->
+      <!-- i overstående p er der både en class i p tagget og under a tagget, dette er fordi ellers vil linket ikke styles og vil forblive blå som et gennerelt link -->
+    </div>
+  </div>
+</div>
+
+
+
+
+  
+
+<!-- Information i find vej sektionen -->
+<div class="vej_info"> <!-- indsat i div for at kunne påvirke alle nedenstående p tags-->
+  <p><b>Parkering:</b> Foran lægehuset er der en stor p-plads.</p>
+  <div id="patient"></div> <!-- id og div er her kun fordi siden skal hoppe og det sted passer med at det ligner 
+    op med vej sektionen  (den ligger ikke helt op til underrubrikken - bevist valg - ligger mere hvor ens øjne er) -->
+  <p><b>Tog:</b> Stopper på Herning station. Der er ikke stoppested <br> ved Gl Landevej</p>
+  <p><b>Bus:</b> Der går bus dageligt fra Herning station. Linje 7 <br> kører ca. hver time og holder uden for lægehuset.</p>
+  <p><b>Handikap forhold:</b> Adgangsforhold og hele huset er <br> indrettet handicapvenligt.</p>
+</div>
+
+<br>
+
+<div id="læger"></div> <!-- id og div er her kun fordi siden skal hoppe og det sted passer med at det ligner op med læge sektionen -->
+
+<hr class="streg fjern_2"> <!--linjen der separat sektioner-->
+
+
+
+<!-- Nye patienter? -->
+<div id="baggrund" class="text-center">  
+    <p id="farve"><b> R Lægehus har lukket for tilgang <br> af nye patienter</b></p>
+</div>
+
+
+
+<hr class="streg fjern_2"> <!--linjen der separat sektioner-->
+
+<br>
+  <!-- Læger og personale afsnit -->
+  <div class="text-center">
+    <h4>Lægerne</h4> 
+  </div>
+
+<!-- Lægerne -->
+<!-- 1.læge -->
+<div class="row1"> <!-- omslutter kolloner -->
+  <!-- de to kolloner: reference https://www.w3schools.com/howto/howto_css_two_columns.asp (de vil ikke ligge ved siden af sig - kun ved hjælp af css) -->
+  <div class="column1"> <!-- (1her er navn)kolloner gennerelt, når der ikke står tal så fylder den det den kan (fx 1kollone = 100% og 2kolloner = 50%)-->
+    <p class="closer">Silje Jonhsen</p>
+    <p class="til_højre">Special læge i alm. medicin</p>
+  </div>
+
+  <div class="column1">
+    <img class="læger" src="img/Personer/Læge1_unsplash.png" alt="Ældre kvindelig læge. Forfatter: Karlyukav. Link: https://www.freepik.com/free-photo/isolated-shotof-happy-successful-mature-senior-physician-wearing-medical-unifrom-stethoscope-having-cheerful-facial-expression-smiling-broadly-keeping-arms-crossed-chest_11102050.htm#query=doctor&position=29&from_view=search&track=sph">
+  </div>
+</div>
+
+<!-- 2.læge -->
+<div class="row1">
+  <div class="column1">
+    <p class="closer">Aksel Jonhsen</p>
+    <p class="til_højre">Special læge i alm. medicin</p>
+  </div>
+
+  <div class="column1">
+    <img class="læger" src="img/Personer/Læge2-unsplash.png" alt="Ældre mandelig læge. Forfatter: Benzoix. Link: https://www.freepik.com/free-photo/covid-coronavirus-outbreak-healthcare-workers-pandemic-concept-enthusiastic-smiling-doctor-physi_21729979.htm#query=doctor&position=3&from_view=search&track=sph ">
+  </div>
+</div>
+
+<!-- 3.læge -->
+<div class="row1">
+  <div class="column1">
+    <p class="closer">Thilde Bogdanov</p>
+    <p class="til_højre">Special læge i alm. medicin</p>
+  </div>
+
+<div id="personale"></div> <!-- id og div er her kun fordi siden skal hoppe og det sted passer med at det ligner op med personale sektionen -->
+
+  <div class="column1">
+    <img class="læger" src="img/Personer/Læge3-unsplash.png" alt="kvindelig læge. Forfatter:humberto chavez. Link: https://unsplash.com/photos/FVh_yqLR9eA">
+  </div>
+</div>
+
+
+
+
+
+
+<!-- Personale -->
+<div class="text-center">
+  <h4 id="plads_top">Personale</h4> <!-- id er til style -->
+</div>
+
+<!-- 1.sygeplejske -->
+<div class="row1">
+  <div class="column1">
+    <p class="closer1">Lukas Thomsen</p>
+    <p class="til_højre1">Sygeplejerske</p>
+  </div>
+
+  <div class="column1">
+    <img class="læger" src="img/Personer/Sygeplejeske1-unsplash.png" alt="Mand i scrubs. Forfatter:Bruno Rodrigues. Link: https://unsplash.com/photos/279xIHymPYY">
+  </div>
+</div>
+
+<!-- 2.sygeplejske -->
+<div class="row1">
+  <div class="column1">
+    <p class="closer1">Selma Fabbri</p>
+    <p class="til_højre1">Sygeplejerske</p>
+  </div>
+
+  <div class="column1">
+    <img class="læger" src="img/Personer/Sygeplejeske2-unsplash.png" alt="Kvinde i scrubs. Forfatter: Rian Ramirez. Link: https://unsplash.com/photos/rm7rZYdl3rY">
+  </div>
+</div>
+
+<!-- 3.sygeplejske -->
+<div class="row1">
+  <div class="column1">
+    <p class="closer1">Theo Ota</p>
+    <p class="til_højre1">Sygeplejerske</p>
+  </div>
+
+  <div class="column1">
+    <img class="læger" src="img/Personer/Sygeplejeske3-unsplash.png" alt="Ung mand i hvid jakke. Forfatter: Dalton Ngangi. Link: https://unsplash.com/photos/ZCztndOWdjs ">
+  </div>
+</div>
+
+<!-- 4.sygeplejske -->
+<div class="row1">
+  <div class="column1">
+    <p class="closer1">Ella Poblete</p>
+    <p class="til_højre1">Sygeplejerske</p>
+  </div>
+
+  <div class="column1">
+    <img class="læger" src="img/Personer/Sygeplejeske4-unsplash.png" alt="Und kvinde med stetoskop. Forfatter: Siednji Leon. Link: https://unsplash.com/photos/lnlSIsiSjjc">
+  </div>
+</div>
+
+
+<!-- Fysioterapeut -->
+<div class="row1">
+  <div class="column1">
+    <p class="closer1">Eddie Timber</p>
+    <p class="til_højre1">Fysioterapeut</p>
+  </div>
+
+  <div class="column1">
+    <img class="læger" src="img/Personer/Fyseteraput-unsplash.png" alt="Mand med stetoskop. Forfatter: Gpointstudio. Link: https://www.freepik.com/free-photo/i-love-my-job-so-much_10978501.htm#query=doctor&position=8&from_view=search&track=sph">
+  </div>
+</div>
+
+
+<!-- Lægesekretær -->
+<div class="row1">
+  <div class="column1">
+    <p class="closer1">Tina Poulsen</p>
+    <p class="til_højre1">Lægesekretær</p>
+  </div>
+
+  <div class="column1">
+    <img class="læger" src="img/Personer/Lægesekretær-unsplash.png" alt="Kvinde der smiler. Forfatter: Coqui Chang. Link: https://unsplash.com/photos/tnUp0OLSkDg">
+  </div>
+</div>
+
+
+
+<hr class="streg"> <!--linjen der separat sektioner-->
+
+
+
+
+
+<!-- GDPR sektion -->
+  <div class="text-center">
+    <h3>GDPR</h3>
+    <a id="gdpr" href="https://www.sundhed.dk/borger/patienthaandbogen/">Se her hvordan vi behandler<br> dine oplysninger </a>
+  <!-- id er til style og til at springe ned på siden -->
+  </div>
+
+  <br>
+
+<!-- informations kasse i bunden -->
+<div class="info_box">
+  
+  <a class="r_lægehus" href="index.html">R </a>
+  <div class="text-center">
+    <a class="box" href="#">Klik her for at læse patienthåndbogen</a>
+  </div>
+
+  <div>
+    <p class="lidt_plads_top">
+      Address <br>
+      <a class="glem_dekorationer" href="http://maps.google.com/?q=GlLandevej2,Herning,7400">
+        <!-- href adressen ser lidt sjov ud til sidst - virker men ansåes som en fejl i validator hvis der var mellemrum -->
+      Gl. Landevej 2, <br>
+      7400 Herning
+      </a>
+    </p>
+    <p>
+      R Lægehus <br>
+      tlf: <a class="bund_nr" href="tel:#"> 11 11 11 11</a> <br>
+      Telefon tid: kl. 8.00-10.00 <br>
+      og igen kl. 10.30-12.00
+    </p>
+
+    <p>
+      Akut telefon <br>
+      Akut-telefon til AKUT opstået sygdom. <br>
+      Fra kl. 12.00-16.00 <br>
+      tlf: <a class="bund_nr" href="tel:#">00 00 00 00</a> <br>
+    </p>
+
+    <p class="lidt_plads_bund"> <!-- class er kun til at skabe lidt luft mellem content og blå box-->
+      Lægevagten <br>
+      
+      Fra kl. 16.00-08.00 i hverdage, samt i weekend <br>
+      og helligdage: hele døgnet. <br>
+      tlf: <a class="bund_nr" href="tel:#">22 22 22 22</a> <br>
+    </p>
+  </div>
+</div>
+
+
+
+
+
+
+
+        <div class="bye"> <!--omsluttede fotter i div og kaldt bye for at kunne farve baggrund + centrer tekst-->
+            <footer>
+             <p class="fjern-margin hvid">dette site har kun til undervisningsformål</p> 
+             <!--- overstående class er til fordi margin bottom skal fjernes for der ikke kommer et hvid mellemrum mellem den grå box og fotteren-->
+            </footer>
+        </div>
+
+
+
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

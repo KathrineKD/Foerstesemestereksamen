@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="da">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="Denne side er forbeholdt nye bruger på lægevejen eller hvis man bare har svært ved at benytte lægevejens hjemmeside. 
+        Der er en foklarende video og instruktioner som der tager dig igennem processen at logge ind for at kunne fornye dine recepter og booke tider." />
+        <meta name="keywords" content="R Lægehus, Book tid, Recept, Hjælp, forklaring, hjælp til booking af tid, hjælp til fornyelse af recept.">
+        <meta name="name" content="Kathrine K. Dam" />
+        <meta name="robots" content="noindex">
+        <title>Hjælp til booking</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <link rel="stylesheet" href="css/new_style.css">
+    </head>
+
+   
+
+    <body>
+
+
+
+
+
+<br>
+<br>
+
+
+                        <!-- Page content-->
+        <!-- samme knap fra indexsiden -->
+            <div class="text-center">   <!--denne div er til for at centrer knappen--> 
+                <a class="btn btn-outline-danger button1" href="https://laegevejen.dk/Login" role="button">
+                    <!-- btn outline-danger er en generel måde at lave knapper på og button1 er den style jeg har lagt til for at tilpasse mit behov -->
+                     <img src="img/Ikoner/calendar_flaticon.png" alt="En sort kallender ikon (forfatter: Freepik. Link:https://www.flaticon.com/free-icons/date" 
+                            class="calender" style="float:left"> <!--brugt id for at kunne ændre på størrelsen og float left så teksten og ikonet kunne stå på sammen linje.-->
+                    <p class="flyt_lidt" style="float:right"><b>Book Tid <br>& <br>Forny Recepter </b> </p>
+                 </a>
+            </div>
+
+
+
+
+
+<!-- Accordion lavet med hjælp af https://www.youtube.com/watch?v=EffzQWuwwQg og har brugt jquery til at animere den (det er i bunden af denne side) -->
+<!-- pop ned m. video -->
+<div class="accordion">
+    <div class="accordion_item">
+        <div class="accordion_title">
+            <h5>Video: Sådan booker du tid?</h5> <!-- bliver skriften på knappen man trykker ned på-->
+            <div class="arrow"><img src="img/Ikoner/ionic-ios-arrow-down.svg" alt="pil fra mockup (XD - plugin (Icons 4 Design))"> </div> 
+            <!-- ovenstående bliver pilen der viser den folder sig ud i knappen man kan trykke på. -->
+        </div>
+        <div class="accordion_desc"> <!-- inde i denne div er vores indhold i accordionet-->
+            <video src="img/Video/Blank.mp4" poster="img/klik_på_knap_u_ramme.PNG" preload="metadata"  controls>
+                <!-- kommentar til overstående linje: controls=hele controlpanelset i bunden. Preload=fortæller om videoen skal loades når siden loades (metadata = information om data)  -->
+                <!-- Jeg har selv optaget videoen + og lavet poster billedet -->
+                <track default src="#"/> <!--track default gør at den automatisk vil gå med denne undertekst (jeg har dog ikke lavet en, men den burde være der.)-->
+                sorry.. your browser does not support.... <!---besked der vil blive vist hvis browseren ikke kan afspille videoen-->
+            </video>
+        </div>
+    </div>
+</div>
+
+
+
+                <!-- Responsive navbar-->
+<!-- Denne ligger under min accordion (i koden) da jeg havde et problem med at de begge havde 
+        faste positioner (hvilket jeg ville have) men accordionen lage sig oven på navbaren når man folede den ud = dermed
+        løsning: sætte denne under da den så læses af computeren sidst og går ud fra det (computeren læser ned af)-->
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+
+        <button class="ændre_knap" onclick="history.back()"> <!--havde problemer med at skulle style den - vidste sig jeg bare skulle sætte klasse ind i denne div -->
+            <img class="go_back" src="img/Ikoner/Backward_arrow.svg" alt="pil fra mockup (XD - plugin (Icons 4 Design))"> <!---indsat billede af pil som man skal trykke på for at gå tilbage-->
+        </button> <!--Gå tilbage knap (reference: https://www.w3schools.com/jsref/met_his_back.asp)
+        Den loader den forige URL fra din historie. onclick=gør at når du klikker så ser skrevent handling
+        Har dog fundet ud af det måske ikke er så sikker, ved dog ikke hvad man ellers kan gøre, da forbrugerne har efterspurgt featuren i researchen (https://www.sjoerdlangkemper.nl/2020/04/08/open-redirect-through-javascript-history-back/)-->
+
+        <a class="navbar-brand" href="index.html">R Lægehus</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-center"> <!--- jeg har sat text-center på til slut i classen = den gør at mine nav-items står i midten når vi er i mobil/mindre versionen-->
+                
+                <!-- Nedenstående er vores punkter på vores navigationsbar -->
+                <li class="nav-item"><a class="nav-link" aria-current="page" href="index.html">Forside</a></li>
+                <li class="nav-item"><a class="nav-link" href="akut.html">Akut</a></li>
+                <li class="nav-item"><a class="nav-link active" href="hjælp_til_booking.html">Hjælp til booking</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Henvisninger</a></li>
+                <li class="nav-item"><a class="nav-link" href="praksis_info.html">Praksis Info</a></li>
+
+                <li class="nav-item"><a class="nav-link" href="#">Sundhedsider</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Behandlingsmuligheder</a></li>
+       
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <hr class="streg"> <!--linjen der separat sektioner-->
+
+
+    <!-- Trin vejledning -->
+    <div class="text-center">  
+        <h3 id="sådan_gør_du">Sådan gør du</h3>
+    </div>  
+
+<br>
+
+
+
+
+<!-- Billederne med tekst -->
+    <!-- LØST PROBLEM: Det ente med at jeg lavede en række med billeder og derefter en ny række med dens tilhørende tekst 
+        - fordi den kluderede rundt i det da jeg prøvede at have tekst og billede i den samme kollonne -->
+<!-- Billeder til trin 1 og 2 -->
+<div class="row8"> <!--- Jeg prøvede at lave det uden denne og det lavede rod i kollonerne - fixes da jeg tilføjede denne igen-->
+    <div class="text-center">
+        <div class="column8">
+            <img src="img/Skærmbilleder/klik_på_knap.jpg" alt="tryk på den røde knap øverst på denne side"> <!--- Billederne er taget fra mine mockups (har selv lavet dem) så de har den tænkte størrelse og vi behøver derfor ikke style dem-->
+        </div>
+
+        <div class="column8">
+            <img src="img/Skærmbilleder/lægevejens_forside.jpg" alt="lægevejens forsiden før du logger ind - du kan vælge at lave en bruger eller at logge ind med mit-id">
+        </div>
+    </div>
+</div>
+
+<!-- Tekst til trin 1 og 2 -->
+  <div class="row8">
+    <div class="text-center">
+        <div class="column8">
+            <p class="venste_align">1. Tryk på ovenstående <br> knap.</p>
+        </div>
+
+        <div class="column8">
+            <p class="venste_align">2. Tryk på log ind <br>metoden "Log ind med <br>NemID/MitID.</p>
+        </div>
+    </div>
+  </div>
+
+
+  <!-- Billeder til trin 3 og 4 -->
+  <div class="row8">
+    <div class="text-center"> <!-- Centrer billederne på siden-->
+        <div class="column8">
+            <img class="trin_billede_venstre" src="img/Skærmbilleder/indskriv_bruger-id.jpg" alt="siden beder dig skive dit bruger id til mit-id">
+        </div>
+
+        <div class="column8">
+            <img class="trin_billede_højre" src="img/Skærmbilleder/åben_mit-id_app.jpg" alt="siden beder dig åbne din mit-id app">
+        </div>
+    </div>
+  </div>
+
+<!-- Tekst til trin 3 og 4 -->
+<div class="row8">
+    <div class="text-center"> <!--- Centrer teksten (jeg har dog stylet den til at følge venstre side - men denne har gjordt sådan jeg kun behøver 1 klasse til at style de to p-tags)-->
+        <div class="column8">
+            <p class="venste_align">3. Indskriv nu dit <br> allerede lavet bruger-id <br> og klik fortsæt.</p>
+        </div>
+
+        <div class="column8">
+            <p class="venste_align">4. Du får nu besked om <br> at åbne din MitID app <br>på din mobil.</p>
+        </div>
+    </div>
+  </div>
+
+  <!-- Billeder til trin 5 og 6 -->
+  <div class="row8">
+    <div class="text-center"> <!-- Centrer billederne på siden-->
+        <div class="column8">
+            <img class="trin_billede_venstre" src="img/Skærmbilleder/skriv_kode.jpg" alt="indskriv dit kodeord eller brug din fingerid">
+        </div>
+
+        <div class="column8">
+            <img class="trin_billede_højre" src="img/Skærmbilleder/swipe.jpg" alt="swipe i appen for at godkende">
+        </div>
+    </div>
+  </div>
+
+<!-- Tekst til trin 5 og 6 -->
+<div class="row8">
+    <div class="text-center"> <!--- Centrer teksten (jeg har dog stylet den til at følge venstre side - men denne har gjordt sådan jeg kun behøver 1 klasse til at style de to p-tags)-->
+        <div class="column8">
+            <p class="venste_align">5. Enten skrive du din <br>pin kode eller så kan du <br>benytte biometriks <br>(fingeraftryk - dette er <br> ikonet i venstre hjørne <br> der ligner et <br> fingeraftryk).</p>
+        </div>
+
+        <div class="column8">
+            <p class="venste_align">6. Pres din finger ned <br> på cirklen og træk <br>den mod højre (swipe).</p>
+        </div>
+    </div>
+  </div>
+
+
+<!-- Billeder til trin 7 og 8 -->
+<div class="row8">
+    <div class="text-center"> <!-- Centrer billederne på siden-->
+        <div class="column8">
+            <img class="trin_billede_venstre" src="img/Skærmbilleder/afslut_i_app.jpg" alt="tryk på knappen i bunden for at afslutte appen">
+        </div>
+
+        <div class="column8">
+            <img class="trin_billede_højre" src="img/Skærmbilleder/skriv_cpr.jpg" alt="Du bliver bedt om at skrive dit cpr-nummer">
+        </div>
+    </div>
+  </div>
+
+<!-- Tekst til trin 7 og 8 -->
+<div class="row8">
+    <div class="text-center"> <!--- Centrer teksten (jeg har dog stylet den til at følge venstre side - men denne har gjordt sådan jeg kun behøver 1 klasse til at style de to p-tags)-->
+        <div class="column8">
+            <p class="venste_align">7. Tryk på afslut og gå ud <br> ad appen.</p>
+        </div>
+
+        <div class="column8">
+            <p class="venste_align">8. Hvis det er første <br>gang du logger ind på <br>Lægevejen, så skal du <br>skrive dit CPR nr.</p>
+        </div>
+    </div>
+  </div>
+
+
+
+
+
+<br>
+<div class="text-center">
+    <p><b> Du er nu logget ind på lægevejen.dk </b></p>
+</div>
+<br>
+
+<!-- trin 9 -->
+<div class="text-center">
+    <img class="billede3" src="img/Skærmbilleder/tidsbestilling_og_fornyelse_af_recept_side.svg" alt="Forsiden af lægevejen når man har logget ind">
+    <!-- er en svg fil da hvis det er en img som de andre så er den for utydelig og hvis de andre er svg så loader siden for langsomt -->
+</div>
+            <br>
+            <br>
+
+            <div class="text-center">
+                <p id="grey">Hvis du er første gangs bruger, så følg trin 9 til 13 for at tilknytte din behandlings klinik</p>
+            </div>
+
+            <br>
+        <div class="flere_punkter">
+            <p>9. Tryk på den blå knap under post ikonet, der hedder <br> Tilmeld klinik.</p>
+            <p>10. Vælg type klinik - Alment praktiserende læge.</p>
+            <p>11. Vælg herefter religion Midtjylland</p>
+            <p>12. Derefter vælger du R lægehus.</p>
+            <p>13. Tryk Tilmeld klinik. </p>
+            <br>
+        </div>
+
+        <div class="text-center">
+            <p id="ret_str">Nu kan du bestille tid og fornye recepter.</p>
+        </div>
+        
+    <br>
+
+
+
+
+
+
+
+
+        <!-- informations kasse i bunden -->
+<div class="info_box">
+  
+    <a class="r_lægehus" href="index.html">R </a>
+    <div class="text-center">
+      <a class="box" href="https://www.sundhed.dk/borger/patienthaandbogen/">Klik her for at læse patienthåndbogen</a>
+    </div>
+  
+    <div>
+      <p class="lidt_plads_top">
+        Address <br>
+        <a class="glem_dekorationer" href="http://maps.google.com/?q=GlLandevej2,Herning,7400">
+            <!-- href adressen ser lidt sjov ud til sidst - virker men ansåes som en fejl i validator hvis der var mellemrum -->
+        Gl. Landevej 2, <br>
+        7400 Herning
+        </a>
+      </p>
+      <p>
+        R Lægehus <br>
+        tlf: <a class="bund_nr" href="tel:#">11 11 11 11</a> <br>
+        Telefon tid: kl. 8.00-10.00 <br>
+        og igen kl. 10.30-12.00
+      </p>
+  
+      <p>
+        Akut telefon <br>
+        Akut-telefon til AKUT opstået sygdom. <br>
+        Fra kl. 12.00-16.00 <br>
+        tlf: <a class="bund_nr" href="tel:#">00 00 00 00</a> <br>
+      </p>
+  
+      <p class="lidt_plads_bund"> <!-- class er kun til at skabe lidt luft mellem content og blå box-->
+        Lægevagten <br>
+        
+        Fra kl. 16.00-08.00 i hverdage, samt i weekend <br>
+        og helligdage: hele døgnet. <br>
+        tlf: <a class="bund_nr" href="tel:#">22 22 22 22</a> <br>
+      </p>
+    </div>
+</div>
+  
+  
+  
+  
+  
+  
+  
+          <div class="bye"> <!--omsluttede fotter i div og kaldt bye for at kunne farve baggrund + centrer tekst-->
+              <footer>
+               <p class="fjern-margin hvid">dette site har kun til undervisningsformål</p> 
+               <!--- overstående class er til fordi margin bottom skal fjernes for der ikke kommer et hvid mellemrum mellem den grå box og fotteren-->
+              </footer>
+          </div>
+
+
+
+
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        
+
+<!-- Accordion lavet med hjælp af https://www.youtube.com/watch?v=EffzQWuwwQg og her kommer jquery ind i (har kun sat mig ind i nedenstående del for at få den til at virke) -->
+    
+        <!-- JQUERY LINK -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+        <!-- $(".accordion_desc").hide();  gør at vors indformation under vores indhold i accordion bliver gemt -->
+        <!-- $(".accordion_title").on('click',function() fortæller at når sccordion_title (kanppen) bliver trykket på så skal den gøre følgene -->
+        <script>
+            $(document).ready(function(){
+                
+                // default state - sådan den automatisk vil være
+                $(".accordion_desc").hide(); 
+                
+                
+                $(".accordion_title").on('click',function(){ 
+                    $(this).next().slideToggle('slow');
+                });
+            });
+       
+        </script>
+
+    </body>
+</html>
